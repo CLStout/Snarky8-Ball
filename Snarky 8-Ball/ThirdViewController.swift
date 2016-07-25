@@ -20,8 +20,13 @@ class ThirdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         questionLabel.text = "You asked: " + question
-        let randomNumber = Int(arc4random_uniform(11))
-        snarkyResponse = responseArray[randomNumber]
-        snarkyResponseLabel.text = snarkyResponse
+        if question == "What is love?" {
+            snarkyResponseLabel.text = "Meaningless"
+        }else{
+            let randomNumber = Int(arc4random_uniform(11))
+            snarkyResponse = responseArray[randomNumber]
+            snarkyResponseLabel.text = snarkyResponse
+        }
     }
+    
 }

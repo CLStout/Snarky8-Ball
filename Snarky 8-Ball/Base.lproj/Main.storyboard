@@ -23,20 +23,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sarcastic 8-Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BA8-wu-HGm">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coj-Bs-hDa">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <segue destination="y5O-Ao-hEs" kind="showDetail" id="eTc-LL-FBU"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Because fake, plastic balls have ALLLLLLLLL the answers&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jk3-cK-suV">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -59,6 +45,23 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coj-Bs-hDa">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <segue destination="y5O-Ao-hEs" kind="showDetail" id="eTc-LL-FBU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snarky 8-Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BA8-wu-HGm">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="94" y="96" width="214" height="43"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -79,9 +82,9 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="gSN-bu-TvF"/>
-                                <exclude reference="BA8-wu-HGm"/>
-                                <exclude reference="coj-Bs-hDa"/>
                                 <exclude reference="jk3-cK-suV"/>
+                                <exclude reference="coj-Bs-hDa"/>
+                                <exclude reference="BA8-wu-HGm"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="jF5-C4-PBL"/>
@@ -102,9 +105,9 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="gSN-bu-TvF"/>
-                                <include reference="BA8-wu-HGm"/>
-                                <include reference="coj-Bs-hDa"/>
                                 <include reference="jk3-cK-suV"/>
+                                <include reference="coj-Bs-hDa"/>
+                                <include reference="BA8-wu-HGm"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="jF5-C4-PBL"/>
@@ -153,7 +156,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V8k-2U-qgn">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;I'd prefer if you didn't ask and saved me the trouble.&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9c-Wz-CuB">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -240,6 +243,7 @@
                     </view>
                     <connections>
                         <outlet property="questionTextField" destination="V8k-2U-qgn" id="R6b-qK-pBW"/>
+                        <segue destination="HIL-dT-87q" kind="show" identifier="initiateSegue" action="showDetailViewController:sender:" id="aSj-B4-u2I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lmi-h2-CbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -262,7 +266,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;I got a snarky respinse for everything, kiddo, buddy, pal, chum, boy.&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMa-tW-eHW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;I got a snarky response for everything, kiddo, buddy, pal, chum, boy.&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMa-tW-eHW">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="0Fc-EE-3Rw"/>
@@ -286,19 +290,58 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You asked:(Question will go here unless you didn't ask a question in which case why?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zps-sF-cU8">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="G86-Fm-8gx"/>
+                                    <constraint firstAttribute="width" constant="300" id="ea9-2h-JGf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="50" y="28" width="297" height="185"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="G86-Fm-8gx"/>
+                                        <exclude reference="ea9-2h-JGf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="G86-Fm-8gx"/>
+                                        <include reference="ea9-2h-JGf"/>
+                                    </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGa-wP-12X">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4E1-KT-zJ5"/>
+                                    <constraint firstAttribute="width" constant="193" id="K3x-5Z-rA5" userLabel="width = 200"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Ask another question"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4E1-KT-zJ5"/>
+                                        <exclude reference="K3x-5Z-rA5"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4E1-KT-zJ5"/>
+                                        <include reference="K3x-5Z-rA5"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="y5O-Ao-hEs" kind="show" id="H9h-QJ-KiC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rGa-wP-12X" firstAttribute="centerX" secondItem="uLQ-qi-nVH" secondAttribute="centerX" id="5T4-DX-BZp"/>
                             <constraint firstItem="b9q-DZ-QME" firstAttribute="top" secondItem="uLQ-qi-nVH" secondAttribute="topMargin" constant="-3" id="9fs-Ux-zJe"/>
                             <constraint firstAttribute="bottomMargin" secondItem="b9q-DZ-QME" secondAttribute="bottom" constant="-2" id="Ezl-EI-ZAV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="b9q-DZ-QME" secondAttribute="trailing" constant="-20" id="FcP-yv-9WI"/>
+                            <constraint firstItem="4bt-d3-KJK" firstAttribute="top" secondItem="rGa-wP-12X" secondAttribute="bottom" constant="37" id="XB0-8T-V5a"/>
                             <constraint firstItem="bMa-tW-eHW" firstAttribute="centerX" secondItem="uLQ-qi-nVH" secondAttribute="centerX" id="dyb-p4-3ce"/>
                             <constraint firstItem="Zps-sF-cU8" firstAttribute="centerX" secondItem="uLQ-qi-nVH" secondAttribute="centerX" id="ijM-78-mkm"/>
                             <constraint firstItem="b9q-DZ-QME" firstAttribute="leading" secondItem="uLQ-qi-nVH" secondAttribute="leadingMargin" constant="-20" id="sRx-tp-Wsp"/>
@@ -310,9 +353,12 @@
                                 <exclude reference="b9q-DZ-QME"/>
                                 <exclude reference="bMa-tW-eHW"/>
                                 <exclude reference="Zps-sF-cU8"/>
+                                <exclude reference="rGa-wP-12X"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="XB0-8T-V5a"/>
                                 <exclude reference="ypQ-Aw-tdt"/>
+                                <exclude reference="5T4-DX-BZp"/>
                                 <exclude reference="ijM-78-mkm"/>
                                 <exclude reference="ufI-WT-ReY"/>
                                 <exclude reference="dyb-p4-3ce"/>
@@ -327,9 +373,12 @@
                                 <include reference="b9q-DZ-QME"/>
                                 <include reference="bMa-tW-eHW"/>
                                 <include reference="Zps-sF-cU8"/>
+                                <include reference="rGa-wP-12X"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="XB0-8T-V5a"/>
                                 <include reference="ypQ-Aw-tdt"/>
+                                <include reference="5T4-DX-BZp"/>
                                 <include reference="ijM-78-mkm"/>
                                 <include reference="ufI-WT-ReY"/>
                                 <include reference="dyb-p4-3ce"/>
@@ -347,10 +396,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1y-mb-U6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1602" y="319.5"/>
+            <point key="canvasLocation" x="1834.5" y="319.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="8Ball" width="3840" height="2160"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="eTc-LL-FBU"/>
+    </inferredMetricsTieBreakers>
 </document>
